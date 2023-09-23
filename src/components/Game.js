@@ -92,7 +92,12 @@ function Game() {
     return (
         <div className="Game">
             <div className="scoreboard">
-                <p className="score">Player: {playerScore} - Computer: {computerScore}</p>
+                <p className="playerHeading">Player</p>
+                <p className="headingSpace"></p>
+                <p className="computerHeading">Computer</p>
+                <p className="playerScore">{playerScore}</p>
+                <p className="scoreDash"> - </p>
+                <p className="computerScore">{computerScore}</p>
             </div>
             <p className="result">{result}</p>
             <div className="weapons">

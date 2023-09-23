@@ -1,38 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Mooli&family=Roboto+Condensed:wght@300&display=swap");
+
+body {
+  background-color: #a80a02;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.Game {
+  border: 5px dashed white;
+  border-radius: 20px;
+  height: 75%;
+  width: 85%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 30px 30px;
+  background-color: #877b7a;
+}
+
+.Game .scoreboard {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  border: 5px solid black;
+  border-radius: 20px;
+  background-color: #a80a02;
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+}
+
+.Game .scoreboard .playerHeading {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+.Game .scoreboard .headingSpace {
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+
+.Game .scoreboard .computerHeading {
+  grid-row-start: 1;
+  grid-column-start: 3;
+}
+
+.Game .scoreboard .playerScore {
+  grid-row-start: 2;
+  grid-column-start: 1;
+}
+
+.Game .scoreboard .scoreDash {
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+.Game .scoreboard .computerScore {
+  grid-row-start: 2;
+  grid-column-start: 3;
+}
+
+.Game .result {
+  font-size: 40px;
+  font-family: 'Mooli', sans-serif;
+  font-weight: bold;
+  color: #1bf72e;
+  margin-top: 150px;
+  margin-bottom: 125px;
+}
+
+.Game .weapons button{
+  height: 90px;
+  width: 250px;
+  font-size: 25px;
+  border: 3px solid red;
+  border-radius: 15px;
+  margin: 30px;
+  cursor: pointer;
+  background-color: black;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
